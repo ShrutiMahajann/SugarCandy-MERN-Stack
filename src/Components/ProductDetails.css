@@ -1,0 +1,274 @@
+/* ================= PAGE ================= */
+
+.product-page{
+  min-height:100vh;
+  padding:50px;
+  background:linear-gradient(135deg,#fff0f5,#ffe4ec);
+  font-family:"Poppins",sans-serif;
+}
+
+/* ================= TOP BAR ================= */
+
+.product-topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:40px;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.productback-btn{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:12px 20px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:#ff4f7a;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.productback-btn:hover{
+  background:#ff4f7a;
+  color:white;
+  transform:translateY(-2px);
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.product-container{
+  display:flex;
+  align-items:center;
+  gap:60px;
+  background:white;
+  border-radius:30px;
+  padding:40px;
+  box-shadow:0 12px 35px rgba(0,0,0,0.08);
+}
+
+/* ================= IMAGE ================= */
+
+.product-img{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.product-img img{
+  width:100%;
+  max-width:450px;
+  height:420px;
+  object-fit:cover;
+  border-radius:25px;
+  transition:0.4s;
+  background:#fff;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.product-img img:hover{
+  transform:scale(1.04);
+}
+
+/* ================= INFO ================= */
+
+.product-info{
+  flex:1;
+}
+
+.product-category{
+  display:inline-block;
+  background:#ffe4ec;
+  color:#ff4f7a;
+  padding:8px 16px;
+  border-radius:20px;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:15px;
+}
+
+.product-info h1{
+  font-size:42px;
+  color:#222;
+  margin-bottom:15px;
+}
+
+.product-rating{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#ff9800;
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:15px;
+}
+
+.product-price{
+  font-size:38px;
+  color:#ff2f60;
+  margin-bottom:20px;
+  font-weight:700;
+}
+
+.product-desc{
+  font-size:16px;
+  line-height:1.8;
+  color:#666;
+  margin-bottom:30px;
+}
+
+/* ================= FEATURES ================= */
+
+.product-features{
+  display:flex;
+  gap:18px;
+  margin:28px 0;
+  flex-wrap:wrap;
+}
+
+.productfeature-box{
+  flex:1;
+  min-width:160px;
+  background:white;
+  padding:16px;
+  border-radius:18px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+
+  /* ADD THIS */
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.productfeature-box svg{
+  font-size:28px;
+  color:#ff4f7a;
+  flex-shrink:0;
+}
+
+/* ADD THIS */
+.productfeature-box div{
+  display:flex;
+  flex-direction:column;
+}
+
+.productfeature-box h4{
+  margin:0;
+  font-size:16px;
+  color:#222;
+  line-height:1.2;
+}
+
+.productfeature-box p{
+  margin-top:4px;
+  font-size:13px;
+  color:#777;
+  line-height:1.3;
+}
+
+/* ================= BUTTONS ================= */
+
+.productbtn-group{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.productcart-btn,
+.productbuy-btn{
+  padding:15px 30px;
+  border:none;
+  border-radius:35px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+/* ADD TO CART */
+
+.productcart-btn{
+  background:linear-gradient(135deg,#ff4f7a,#ff6f91);
+  color:white;
+  box-shadow:0 8px 20px rgba(255,79,122,0.25);
+}
+
+.productcart-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(255,79,122,0.35);
+}
+
+/* BUY NOW */
+
+.productbuy-btn{
+  background:white;
+  border:2px solid #ff4f7a;
+  color:#ff4f7a;
+}
+
+.productbuy-btn:hover{
+  background:#ff4f7a;
+  color:white;
+  transform:translateY(-3px);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  .product-container{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .product-info{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .product-features{
+    justify-content:center;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .product-page{
+    padding:20px;
+  }
+
+  .product-container{
+    padding:25px;
+  }
+
+  .product-info h1{
+    font-size:30px;
+  }
+
+  .productprice{
+    font-size:30px;
+  }
+
+  .product-img img{
+    height:300px;
+  }
+
+  .productbtn-group{
+    width:100%;
+    flex-direction:column;
+  }
+
+  .productcart-btn,
+  .productbuy-btn{
+    width:100%;
+  }
+
+}

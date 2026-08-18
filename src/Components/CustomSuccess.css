@@ -1,0 +1,276 @@
+.cakesuccess-page{
+  width:100%;
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  position:relative;
+  overflow:hidden;
+
+  padding:30px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #fff5f8,
+    #ffe6ef,
+    #fff8fb
+  );
+
+  font-family:"Poppins",sans-serif;
+}
+
+/* Floating Background */
+
+.floating-circle{
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,79,122,.08);
+}
+
+.circle1{
+  width:280px;
+  height:280px;
+  top:-60px;
+  left:-60px;
+}
+
+.circle2{
+  width:200px;
+  height:200px;
+  bottom:60px;
+  right:50px;
+}
+
+.circle3{
+  width:120px;
+  height:120px;
+  top:120px;
+  right:180px;
+}
+
+/* Card */
+
+.cakesuccess-card{
+  width:100%;
+  max-width:750px;
+
+  background:rgba(255,255,255,.95);
+
+  backdrop-filter:blur(20px);
+
+  border-radius:40px;
+
+  padding:60px 50px;
+
+  text-align:center;
+
+  box-shadow:
+  0 25px 60px rgba(255,79,122,.18);
+
+  z-index:2;
+
+  animation:showCard .6s ease;
+}
+
+@keyframes showCard{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Icon */
+
+.success-icon-box{
+  width:120px;
+  height:120px;
+
+  margin:auto;
+  margin-bottom:25px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+  linear-gradient(
+    135deg,
+    #ff4f7a,
+    #ff7a9d
+  );
+
+  box-shadow:
+  0 20px 40px rgba(255,79,122,.28);
+}
+
+.success-icon{
+  color:white;
+  font-size:60px;
+}
+
+/* Text */
+
+.success-tag{
+  display:inline-block;
+
+  padding:10px 22px;
+
+  border-radius:30px;
+
+  background:#fff0f5;
+
+  color:#ff4f7a;
+
+  font-size:13px;
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  margin-bottom:25px;
+}
+
+.cakesuccess-card h1{
+  font-size:48px;
+  line-height:1.2;
+
+  color:#222;
+
+  margin-bottom:20px;
+}
+
+.cakesuccess-card p{
+  max-width:600px;
+
+  margin:auto;
+
+  color:#666;
+
+  line-height:1.9;
+
+  font-size:17px;
+}
+
+/* Info Cards */
+
+.success-info{
+  margin-top:40px;
+
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.info-card{
+  min-width:240px;
+
+  padding:18px;
+
+  border-radius:20px;
+
+  background:#fff7fa;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  text-decoration:none;
+  color:#ff4f7a;
+  font-weight:600;
+}
+
+.info-card svg{
+  font-size:20px;
+}
+
+/* Button */
+
+.back-home-btn{
+  margin-top:40px;
+
+  border:none;
+
+  padding:16px 36px;
+
+  border-radius:50px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #ff4f7a,
+    #ff7096
+  );
+
+  color:white;
+
+  font-size:16px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+
+  transition:.3s;
+}
+
+.back-home-btn:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+  0 15px 30px rgba(255,79,122,.30);
+}
+
+/* Receipt */
+.cakereceipt-btn{
+  padding:16px 35px;
+  border:none;
+  border-radius:23px;
+  background:#ff4f81;
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+   margin-left:20px;
+
+  margin-top:0;   /* ya remove kar do */
+}
+
+.cakereceipt-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+  .cakesuccess-card{
+    padding:40px 25px;
+  }
+
+  .cakesuccess-card h1{
+    font-size:34px;
+  }
+
+  .success-icon-box{
+    width:90px;
+    height:90px;
+  }
+
+  .success-icon{
+    font-size:45px;
+  }
+}

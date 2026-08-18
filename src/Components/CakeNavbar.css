@@ -1,0 +1,552 @@
+```css
+/* ================= MAIN ================= */
+
+.cake-nav{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow-X: hidden;
+  overflow-y: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= BACKGROUND ================= */
+
+.bg-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(45%);
+  transform: scale(1.02);
+}
+
+/* ================= COMMON FLEX ================= */
+
+.Cnavbar,
+.cakelogo,
+.right-nav,
+.cakenav-content,
+.cakeprofile,
+.cakeprofile-top,
+.cakeprofile-dropdown a,
+.menu-icon,
+.cakenav-btn,
+.cakelogofooter,
+.cakesocial-icons a{
+  display: flex;
+  align-items: center;
+}
+
+.cakeprofile,
+.menu-icon,
+.cakesocial-icons a{
+  justify-content: center;
+}
+
+/* ================= NAVBAR ================= */
+
+.Cnavbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 22px 70px;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+/* ================= LOGO ================= */
+
+.cakelogo{
+  display:flex;
+  align-items:center;
+  gap:0px;
+  flex-shrink:0;
+}
+
+.cakelogo-icon{
+  font-size: 1.9rem;
+  color: #ff4f7a;
+  background: white;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  transition: 0.35s ease;
+}
+
+.cakelogo-icon:hover{
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.cakelogo span,
+.cakelogofooter span{
+  font-weight: 700;
+}
+
+.cakelogo span{
+  font-size:2rem;
+  font-weight:700;
+  color:white;
+  letter-spacing:0.5px;
+  margin-left:-18px;
+  white-space:nowrap;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.right-nav,
+.cakenav-content{
+  gap: 28px;
+}
+
+/* ================= NAV LINKS ================= */
+
+.cakenav-content a,
+.cakefooter-box a{
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cakenav-content a{
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+}
+
+.cakenav-content a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #ffb6c1;
+  transition: 0.3s;
+}
+
+.cakenav-content a:hover{
+  color: #ffd1dc;
+}
+
+.cakenav-content a:hover::after{
+  width: 100%;
+}
+
+/* ================= PROFILE ================= */
+
+.cakeprofile-wrapper{
+  position: relative;
+}
+
+.cakeprofile{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: 0.3s ease;
+}
+
+.cakeprofile:hover{
+  background: rgba(255,255,255,0.22);
+  transform: scale(1.08);
+}
+
+/* ================= DROPDOWN ================= */
+
+.cakeprofile-dropdown{
+  position: absolute;
+  top: 64px;
+  right: 0;
+  width: 230px;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+  animation: cakeDrop 0.28s ease;
+}
+
+@keyframes cakeDrop{
+  from{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cakeprofile-top{
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.cakeprofile-big-icon{
+  font-size: 42px;
+  color: #ff4f7a;
+}
+
+.cakeprofile-top h4,
+.cakeprofile-top p{
+  margin: 0;
+}
+
+.cakeprofile-top h4{
+  font-size: 16px;
+  color: #222;
+}
+
+.cakeprofile-top p{
+  font-size: 12px;
+  color: #888;
+}
+
+.cakeprofile-dropdown a{
+  gap: 12px;
+  color: #444;
+  padding: 10px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.cakeprofile-dropdown a:hover{
+  background: #fff1f5;
+  color: #ff4f7a;
+  transform: translateX(4px);
+}
+
+.cake-logout-btn{
+  width:90%;
+  margin:12px auto;
+  display:block;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#ff4d6d;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.cake-logout-btn:hover{
+  opacity:0.9;
+}
+
+.user-nav-name{
+  color:white;
+  font-weight:600;
+}
+/* ================= ICON BOX ================= */
+
+.menu-icon{
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: #fff5f7;
+  color: #ff4f7a;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.cakeprofile-dropdown a:hover .menu-icon{
+  background: #ff4f7a;
+  color: white;
+}
+
+/* ================= HERO SECTION ================= */
+
+.cake-heading{
+  position: absolute;
+  top: 28%;
+  left: 7%;
+  color: white;
+  max-width: 620px;
+  z-index: 2;
+}
+
+.cake-since{
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: #ffd7e2;
+  margin-bottom: 22px;
+}
+
+.cake-heading h2{
+  font-size: 72px;
+  line-height: 1.08;
+  margin-bottom: 22px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.35);
+}
+
+.cake-heading p{
+  font-size: 17px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.88);
+  max-width: 560px;
+}
+
+/* ================= BUTTONS ================= */
+
+.cakenav-btn{
+  position: absolute;
+  top: 79%;
+  left: 6%;
+  gap: 18px;
+  z-index: 2;
+}
+
+.cake-orderbtn,
+.cake-browse{
+  padding: 15px 30px;
+  border-radius: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.35s ease;
+  letter-spacing: 0.4px;
+}
+
+.cake-orderbtn{
+  border: none;
+  background: linear-gradient(135deg,#ff4f7a,#ff7a9a);
+  color: white;
+  box-shadow: 0 10px 28px rgba(255,79,122,0.35);
+}
+
+.cake-orderbtn:hover,
+.cake-browse:hover{
+  transform: translateY(-4px);
+}
+
+.cake-orderbtn:hover{
+  box-shadow: 0 16px 35px rgba(255,79,122,0.45);
+}
+
+.cake-browse{
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+}
+
+.cake-browse:hover{
+  background: rgba(255,255,255,0.18);
+}
+
+/* ================= FOOTER ================= */
+.footer-top-banner{
+  background: linear-gradient(
+    135deg,
+    #ff4f7a,
+    #ff8fab
+  );
+  padding:50px 20px;
+  text-align:center;
+  color:white;
+}
+
+.footer-top-banner h2{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.cake-footer{
+  background: #111;
+  color: white;
+  padding: 70px 8% 30px;
+}
+
+.cakefooter-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 45px;
+}
+
+.cakefooter-box h3{
+  margin-bottom: 18px;
+  font-size: 22px;
+}
+
+.cakelogofooter{
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.cakelogofooter span{
+  font-size: 1.8rem;
+}
+
+.cakefooter-box p{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ccc;
+  line-height: 1.7;
+  margin-left: 18px;
+}
+
+.cakefooter-box a{
+  display: block;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+.cakefooter-box a:hover{
+  color: #ffb6c1;
+  padding-left: 5px;
+}
+
+/* ================= SOCIAL ================= */
+
+.cakesocial-icons{
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cakesocial-icons a{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #222;
+  color: white;
+  transition: 0.3s;
+}
+
+.cakesocial-icons a:hover{
+  transform: translateY(-4px);
+}
+
+/* ================= FOOTER BOTTOM ================= */
+
+.cakefooter-bottom{
+  text-align: center;
+  margin-top: 50px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+  .Cnavbar{
+    padding: 20px;
+  }
+
+  .cake-heading{
+    top: 24%;
+    left: 20px;
+  }
+
+  .cake-heading h2{
+    font-size: 48px;
+  }
+
+  .cake-heading p{
+    font-size: 15px;
+  }
+
+  .cakenav-btn{
+    left: 20px;
+    top: 68%;
+    flex-wrap: wrap;
+  }
+}
+
+@media(max-width:600px){
+
+  .cake-heading{
+    top: 22%;
+  }
+
+  .cake-heading h2{
+    font-size: 36px;
+  }
+
+  .cake-heading p{
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .cakenav-content{
+    display: none;
+  }
+
+  .cakenav-btn{
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .cake-orderbtn,
+  .cake-browse{
+    width: 100%;
+  }
+
+  .cakeprofile-dropdown{
+    width: 210px;
+    right: -10px;
+  }
+}
+
+/* ================= LOGO IMAGE ================= */
+
+.cakelogo-image{
+  width:95px;
+  height:95px;
+  object-fit:contain;
+  display:block;
+  flex-shrink:0;
+}
+/* FOOTER LOGO */
+
+/* ================= FOOTER LOGO ================= */
+
+.cakelogofooter{
+  display:flex;
+  align-items:center;
+  gap:0;
+  margin-bottom:18px;
+}
+
+.cakelogo-footer-image{
+  width:95px;
+  height:95px;
+  object-fit:contain;
+  display:block;
+  flex-shrink:0;
+}
+
+.cakelogofooter span{
+  font-size:1.8rem;
+  font-weight:700;
+  color:white;
+  letter-spacing:0.5px;
+  margin-left:-18px;
+  white-space:nowrap;
+}

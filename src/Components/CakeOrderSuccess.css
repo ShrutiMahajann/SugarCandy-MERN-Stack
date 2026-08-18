@@ -1,0 +1,342 @@
+.ordersuccess-page{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+
+  background:
+  radial-gradient(circle at top left,#ff7aa2 0%,transparent 35%),
+  radial-gradient(circle at bottom right,#ff4f7a 0%,transparent 35%),
+  radial-gradient(circle at center right,#ffb6c1 0%,transparent 25%),
+  #fff5f8;
+}
+
+/* ================= FLOATING CIRCLES ================= */
+
+.floating-circle{
+  position:absolute;
+  border-radius:50%;
+
+  background:#ff4f7a;
+
+  opacity:0.35;
+
+  filter:blur(0px);
+
+  z-index:1;
+}
+
+.circle1{
+  width:450px;
+  height:450px;
+  top:-150px;
+  left:-150px;
+}
+
+.circle2{
+  width:350px;
+  height:350px;
+  bottom:-120px;
+  right:-120px;
+}
+
+.circle3{
+  width:250px;
+  height:250px;
+  top:80px;
+  right:150px;
+}
+
+.circle4{
+  width:220px;
+  height:220px;
+  bottom:120px;
+  left:120px;
+}
+/* ================= CARD ================= */
+
+.ordersuccess-card{
+  width:100%;
+  max-width:720px;
+  padding:55px 45px;
+
+  text-align:center;
+
+  border-radius:35px;
+
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(20px);
+
+  border:1px solid rgba(255,255,255,.6);
+
+  box-shadow:
+  0 25px 60px rgba(255,79,122,.18);
+
+  position:relative;
+  z-index:2;
+
+  animation:pop .6s ease;
+}
+
+@keyframes pop{
+
+  from{
+    opacity:0;
+    transform:translateY(30px) scale(.95);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+/* ================= ICON ================= */
+
+.success-icon-box{
+  width:130px;
+  height:130px;
+
+  margin:auto;
+  margin-bottom:25px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:
+  linear-gradient(
+    135deg,
+    #22c55e,
+    #4ade80
+  );
+
+  box-shadow:
+  0 20px 40px rgba(34,197,94,.25);
+
+  animation:pulse 2s infinite;
+}
+
+.success-icon{
+  font-size:65px;
+  color:white;
+}
+
+@keyframes pulse{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.08);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+}
+
+/* ================= BADGE ================= */
+
+.success-badge{
+  display:inline-block;
+
+  padding:10px 22px;
+
+  border-radius:30px;
+
+  background:#fff0f5;
+
+  color:#ff4f7a;
+
+  font-size:13px;
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  margin-bottom:20px;
+}
+
+/* ================= TEXT ================= */
+
+.ordersuccess-card h1{
+  font-size:46px;
+  color:#222;
+  margin-bottom:18px;
+  line-height:1.2;
+}
+
+.ordersuccess-card p{
+  color:#666;
+  line-height:1.9;
+  font-size:17px;
+
+  max-width:580px;
+  margin:auto auto 35px;
+}
+
+/* ================= DETAILS ================= */
+
+.success-details{
+  background:#fff7fa;
+
+  border-radius:25px;
+
+  padding:28px;
+
+  margin-bottom:25px;
+}
+
+.success-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:18px;
+
+  color:#444;
+}
+
+.success-row:last-child{
+  margin-bottom:0;
+}
+
+.success-row span{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.success-status{
+  color:#22c55e;
+  font-weight:700;
+}
+
+/* ================= NOTE ================= */
+
+.success-note{
+  background:#f9fafb;
+
+  border-left:4px solid #ff4f7a;
+
+  padding:16px;
+
+  border-radius:14px;
+
+  color:#555;
+
+  margin-bottom:35px;
+
+  text-align:left;
+}
+
+/* ================= BUTTONS ================= */
+
+.success-btns{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.home-btn,
+.shop-btn{
+  border:none;
+
+  padding:15px 30px;
+
+  border-radius:40px;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  transition:.3s ease;
+}
+
+.home-btn{
+  background:
+  linear-gradient(
+    135deg,
+    #ff4f7a,
+    #ff7096
+  );
+
+  color:white;
+}
+
+.shop-btn{
+  background:#fff0f5;
+  color:#ff4f7a;
+}
+
+.home-btn:hover,
+.shop-btn:hover{
+  transform:translateY(-4px);
+}
+
+.home-btn:hover{
+  box-shadow:
+  0 15px 30px rgba(255,79,122,.30);
+}
+
+.shop-btn:hover{
+  background:#ffe3ec;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+  .ordersuccess-card{
+    padding:40px 25px;
+  }
+
+  .ordersuccess-card h1{
+    font-size:34px;
+  }
+
+  .success-row{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .success-btns{
+    flex-direction:column;
+  }
+
+  .home-btn,
+  .shop-btn{
+    width:100%;
+    justify-content:center;
+  }
+}
+
+/* Receipt */
+.cakesuccessreceipt-btn{
+  padding:14px 30px;
+  border:none;
+  border-radius:25px;
+  background:#ff4f81;
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+
+  margin-top:0;   /* ya remove kar do */
+}
+
+.cakesuccessreceipt-btn:hover{
+  transform:translateY(-3px);
+}
